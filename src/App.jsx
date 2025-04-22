@@ -39,7 +39,7 @@ function App() {
   return (
     <>
     <div>
-      <h2 className='mt-9 text-gray-200 font-mono text-center text-3xl font-semibold '>📝 To-Do List 📝</h2>
+      <h2 className='mt-9 mb-14 text-gray-200 font-mono text-center text-3xl font-semibold '>📝 To-Do List 📝</h2>
     </div>
     <div>
       <ul className=''>
