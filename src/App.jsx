@@ -1,6 +1,7 @@
 import { useState,useEffect } from 'react'
 import './App.css'
 import TodoItem from './components/TodoItem'
+import Todoinput from './components/Todoinput'
 
 function App() {
    const [todos , settodos] = useState(() => {
@@ -45,12 +46,15 @@ function App() {
       <ul className=''>
         {
           todos.map((todo) => (
-            <TodoItem key = {todo.id} todo = {todo} toggletodo={toggletodo} />
+            <TodoItem key = {todo.id} todo = {todo} toggletodo={toggletodo} deltodo={deltodo}  />
           ))
         }
-        
       </ul>
     </div>
+    <div>
+      <Todoinput addtodo ={addtodo}/> 
+    </div> 
+    
     </>
   )
 }
