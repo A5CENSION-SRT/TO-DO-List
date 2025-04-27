@@ -8,17 +8,17 @@ const Sidebar = ({ todos }) => {
     <div>
       <h3 className="text-xl font-semibold pb-2 mb-4">Tasks Overview</h3>
       <section className="mb-6">
-        <h4 className="text-lg font-medium mb-2">Uncompleted Tasks</h4>
+        <h4 className="text-lg font-medium mb-2">Incomplete Tasks</h4>
         {uncompleted.length > 0 ? (
           <ul className="list-none pl-5">
             {uncompleted.map(todo => (
               <li key={todo.id}>
-                {todo.text.length > 10 ? todo.text.slice(0, 10) + " ..." : todo.text}
+                {todo.text.length > 20 ? todo.text.slice(0, 20) + " ..." : todo.text}
               </li>
             ))}
           </ul>
         ) : (
-          <p className="text-gray-400">No uncompleted tasks</p>
+          <p className="text-gray-400">No incomplete tasks</p>
         )}
       </section>
       <section>

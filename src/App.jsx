@@ -39,26 +39,36 @@ function App() {
 
   return (
     <>
-      <div className="fixed top-0 left-0 h-full pl-15 pr-15 flex justify-center items-center rounded-r-4xl font-mono" style={{backgroundColor: "#2E2E2F"}}>
+      <div
+        className="fixed top-0 left-0 h-full pr-5 flex justify-center items-center rounded-r-4xl font-mono w-1/5 transition-all duration-500"
+        style={{ backgroundColor: "#2E2E2F" }}
+      >
         <Sidebar todos={todos} />
       </div>
-      <div className="font-mono">
-        <div className='flex flex-col justify-center pl-60'> 
+      <div className="font-mono transition-all duration-500">
+        <div className="flex flex-col justify-center pl-60">
           <div>
-            <h2 className='mt-9 mb-14 text-gray-200 text-center text-3xl font-semibold'>📝 To-Do List 📝</h2>
+            <h2 className="mt-9 mb-14 text-gray-200 text-center text-3xl font-semibold">
+              📝 To-Do List 📝
+            </h2>
           </div>
           <div>
-            <ul className=''>
+            <ul>
               {todos.map((todo) => (
-                <TodoItem key={todo.id} todo={todo} toggletodo={toggletodo} deltodo={deltodo} />
+                <TodoItem
+                  key={todo.id}
+                  todo={todo}
+                  toggletodo={toggletodo}
+                  deltodo={deltodo}
+                />
               ))}
             </ul>
           </div>
-          <div className='w-full max-w-lg text-center mx-auto mt-2 mb-2'>
+          <div className="w-full max-w-lg text-center mx-auto mt-2 mb-2">
             <Todoinput addtodo={addtodo} />
           </div>
         </div>
-      </div> 
+      </div>
     </>
   )
 }
